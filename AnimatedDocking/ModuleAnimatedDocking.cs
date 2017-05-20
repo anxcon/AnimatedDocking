@@ -6,19 +6,29 @@ namespace AnimatedDocking
 {
     public class ModuleAnimatedDocking : PartModule
     {
+        [KSPField]
+        public string animationName = "";
+
         private ModuleAnimateGeneric module;
 
         public override void OnStart(StartState state)
         {
             base.OnStart(state);
-            this.module = base.part.FindModuleImplementing<ModuleAnimateGeneric>();
+            foreach (ModuleAnimateGeneric m in base.part.FindModulesImplementing<ModuleAnimateGeneric>())
+            {
+                if (m.animationName == this.animationName)
+                {
+                    this.module = m;
+                    break;
+                }
+            }
             if (this.module == null) return;
             GameEvents.onPartCouple.Add(this.onPartCouple);
             GameEvents.onPartUndock.Add(this.onPartUndock);
         }
         private void onPartCouple(GameEvents.FromToAction<Part, Part> action)
         {
-            if (action.from == base.part)
+            if (action.to == base.part)
             {
                 module.Toggle();
             }
@@ -27,7 +37,7 @@ namespace AnimatedDocking
         {
             if (part = base.part)
             {
-                module.Toggle();
+                this.module.Toggle();
             }
         }
         private void OnDestroy()

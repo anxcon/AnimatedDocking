@@ -5,6 +5,5 @@ D:\Projects\KSP_Mods\AnimatedDocking\AnimatedDocking\bin\Debug\UnityEngine.dll
 D:\Projects\KSP_Mods\AnimatedDocking\AnimatedDocking\bin\Debug\Assembly-CSharp-firstpass.dll
 D:\Projects\KSP_Mods\AnimatedDocking\AnimatedDocking\bin\Debug\UnityEngine.UI.dll
 D:\Projects\KSP_Mods\AnimatedDocking\AnimatedDocking\bin\Debug\KSPAssets.dll
-D:\Projects\KSP_Mods\AnimatedDocking\AnimatedDocking\obj\Debug\AnimatedDocking.csprojResolveAssemblyReference.cache
 D:\Projects\KSP_Mods\AnimatedDocking\AnimatedDocking\obj\Debug\AnimatedDocking.dll
 D:\Projects\KSP_Mods\AnimatedDocking\AnimatedDocking\obj\Debug\AnimatedDocking.pdb
